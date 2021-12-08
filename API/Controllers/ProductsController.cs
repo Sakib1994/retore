@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Cors;
+using API.Attribute;
 
 namespace API.Controllers
 {
+    [AllowCrossSite]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
